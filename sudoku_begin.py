@@ -42,3 +42,20 @@ def main():
 
 if __name__ == '__main__':
         main()
+
+
+
+# when taking a 9 row list with 9 columns as input, the following code will
+# generate 9 partially solved columns
+
+for each in range(len(new)):
+    cur = [row[each] for row in new]
+    for e in range(len(cur)):
+            cur_row = new[e]
+            n = random.randint(1,9)
+            cur[e] = n
+            new[e][each] = n
+            while cur.count(cur[e]) != 1 and cur_row.count(cur[e]) != 1:
+                    n = random.randint(1,9)
+                    cur[e] = n
+                    new[e][each] = n
